@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Environment / secrets
+.env
+
+# Terraform
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.backup
+**/*.tfvars
+!**/*.tfvars.example
+**/.terraform.lock.hcl
+
+# Generated artifacts (reproducible by re-running their scripts)
+synthetic_movies.jsonl
+
+# OS
+.DS_Store
+Thumbs.db

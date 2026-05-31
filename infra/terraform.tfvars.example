@@ -1,0 +1,6 @@
+location = "centralindia"
+vm_size = "Standard_B2s_v2"
+my_ip = "your-public-ip/32"
+ssh_public_key = "your-ssh-public-key-content"
+vm_name = "your-vm-name"
+vm_admin_username = "your-admin-username"

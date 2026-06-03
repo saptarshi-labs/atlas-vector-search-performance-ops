@@ -1,0 +1,11 @@
+atlas_public_key = "your-atlas-org-api-public-key"
+atlas_private_key = "your-atlas-org-api-private-key"
+atlas_org_id = "your-atlas-org-id"
+
+project_name = "vector-search-performance"
+cluster_name = "vector-search-performance"
+
+db_username = "vectordemo"
+db_password = "your-strong-password"
+
+allowed_ip = "your-vm-public-ip"

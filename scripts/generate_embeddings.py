@@ -58,9 +58,11 @@ cursor = movies.find(query, projection).limit(MOVIE_LIMIT)
 def embed_texts(texts):
     for attempt in range(1, MAX_RETRIES + 1):
         try:
+            print(f"  calling OpenAI for batch of {len(texts)}...")
             response = openai_client.embeddings.create(
                 model=EMBEDDING_MODEL,
                 input=texts,
+                timeout=30,
             )
             return [item.embedding for item in response.data]
         except Exception as e:

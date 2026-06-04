@@ -1,0 +1,50 @@
+{
+  "plot_characters": [
+    "police inspector", "school teacher", "railway clerk", "farmer",
+    "doctor", "journalist", "auto driver", "fisherman", "shopkeeper",
+    "lawyer", "nurse", "street vendor", "civil servant"
+  ],
+  "plot_actions": [
+    "uncover a hidden truth", "find a missing brother",
+    "save the family land", "expose a corrupt official",
+    "return to their village", "clear their family name",
+    "protect a small town", "recover a stolen heirloom",
+    "reunite a broken family", "win back lost respect",
+    "survive the monsoon floods", "fight an unjust eviction",
+    "settle an old debt"
+  ],
+  "plot_obstacles": [
+    "a powerful landlord", "a relentless monsoon", "an old family feud",
+    "a buried secret", "a ruthless moneylender", "a ticking deadline",
+    "a long separation", "a broken promise", "a spreading rumour",
+    "a corrupt official", "a bitter rival", "a failing harvest",
+    "a forgotten mistake"
+  ],
+  "fullplot_openings": [
+    "In a quiet village in Kerala", "Amid the crowded lanes of Old Delhi",
+    "On the banks of a slow river in Bengal", "During the monsoon in Mumbai",
+    "In a hill town in the Himalayas", "Across the deserts of Rajasthan",
+    "In a coastal town in Tamil Nadu", "In a tea estate in Assam"
+  ],
+  "genres": [
+    "Drama", "Comedy", "Thriller", "Action", "Romance", "Mystery",
+    "Adventure", "Crime", "Family", "Historical"
+  ],
+  "first_names": [
+    "Arjun", "Priya", "Rahul", "Ananya", "Vikram", "Meera", "Aditya",
+    "Kavya", "Rohan", "Sneha", "Karthik", "Divya", "Aravind", "Pooja",
+    "Imran", "Nandini"
+  ],
+  "last_names": [
+    "Sharma", "Iyer", "Khan", "Reddy", "Banerjee", "Nair", "Patel",
+    "Menon", "Chatterjee", "Gupta", "Pillai", "Desai", "Rao", "Bose"
+  ],
+  "title_first_word": [
+    "The Last", "A Quiet", "The Long", "The Lost", "Monsoon", "The Final",
+    "Hidden", "Distant", "Silent", "The Burning"
+  ],
+  "title_second_word": [
+    "Promise", "Homecoming", "Shadow", "Journey", "Letter", "Harvest",
+    "Crossing", "Echo", "Refuge", "Verdict"
+  ]
+}

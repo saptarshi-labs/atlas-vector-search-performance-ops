@@ -18,9 +18,10 @@ while true; do
     echo "  3) Create Vector Index"
     echo "  4) Create Text Index"
     echo "  5) Run a Validation Search"
-    echo "  6) Import Synthetic Data"
-    echo "  7) Export Evidence"
-    echo "  8) Quit"
+    echo "  6) Generate Synthetic Movies"
+    echo "  7) Import Synthetic Data"
+    echo "  8) Export Evidence"
+    echo "  9) Quit"
     read -rp "Choice: " choice
 
     case "$choice" in
@@ -52,17 +53,20 @@ while true; do
             cd ..
             ;;
         6)
+            cd scripts && python3 generate_synthetic_movies.py && cd ..
+            ;;
+        7)
             mongoimport --uri "$ATLAS_URI" \
                 --db sample_mflix --collection movies \
                 --file scripts/synthetic_movies.jsonl
             ;;
-        7)
+        8)
             mkdir -p evidence
             mongoexport --uri "$ATLAS_URI" \
                 --db sample_mflix --collection search_evidence \
                 --out evidence/search_evidence.json
             ;;
-        8)
+        9)
             exit 0
             ;;
     esac

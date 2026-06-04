@@ -29,7 +29,7 @@ resource "mongodbatlas_advanced_cluster" "m10" {
   name = var.cluster_name
   cluster_type = "REPLICASET"
 
-  mongo_db_major_version = "8.1"
+  mongo_db_major_version = "8.0"
 
   replication_specs {
     region_configs {

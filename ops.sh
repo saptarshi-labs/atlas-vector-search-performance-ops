@@ -1,8 +1,7 @@
 #!/bin/bash
 #
-# run.sh
+# ops.sh
 # Menu launcher for the project's operational tasks.
-# Run from the repo root.
 
 cd "$(dirname "$0")"
 source .venv/bin/activate
@@ -16,20 +15,32 @@ while true; do
     echo "Atlas Vector Search Performance Ops"
     echo "  1) Load Sample Database"
     echo "  2) Generate Embeddings"
-    echo "  3) Run a Validation Search"
-    echo "  4) Import Synthetic Data"
-    echo "  5) Export Evidence"
-    echo "  6) Quit"
+    echo "  3) Create Vector Index"
+    echo "  4) Create Text Index"
+    echo "  5) Run a Validation Search"
+    echo "  6) Import Synthetic Data"
+    echo "  7) Export Evidence"
+    echo "  8) Quit"
     read -rp "Choice: " choice
 
     case "$choice" in
         1)
-            atlas clusters loadSampleData "$CLUSTER_NAME"
+            atlas clusters sampleData load "$CLUSTER_NAME"
             ;;
         2)
             cd scripts && python3 generate_embeddings.py && cd ..
             ;;
         3)
+            atlas clusters search indexes create \
+                --clusterName "$CLUSTER_NAME" \
+                --file index_definitions/vector_index.json
+            ;;
+        4)
+            atlas clusters search indexes create \
+                --clusterName "$CLUSTER_NAME" \
+                --file index_definitions/text_index.json
+            ;;
+        5)
             echo "  1) Vector  2) Text  3) Hybrid"
             read -rp "Choice: " s
             cd queries
@@ -40,18 +51,18 @@ while true; do
             esac
             cd ..
             ;;
-        4)
+        6)
             mongoimport --uri "$ATLAS_URI" \
                 --db sample_mflix --collection movies \
                 --file scripts/synthetic_movies.jsonl
             ;;
-        5)
+        7)
             mkdir -p evidence
             mongoexport --uri "$ATLAS_URI" \
                 --db sample_mflix --collection search_evidence \
                 --out evidence/search_evidence.json
             ;;
-        6)
+        8)
             exit 0
             ;;
     esac

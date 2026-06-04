@@ -3,8 +3,7 @@
   "collectionName": "movies",
   "name": "plot_vector_index",
   "type": "vectorSearch",
-  "definition": {
-    "fields": [
+  "fields": [
       {
         "type": "vector",
         "path": "plot_embedding",
@@ -28,5 +27,4 @@
         "path": "directors"
       }
     ]
-  }
 }

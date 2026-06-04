@@ -2,6 +2,7 @@
   "database": "sample_mflix",
   "collectionName": "movies",
   "name": "plot_text_index",
+  "type": "search",
   "mappings": {
     "dynamic": false,
     "fields": {

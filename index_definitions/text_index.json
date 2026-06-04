@@ -1,0 +1,16 @@
+{
+  "database": "sample_mflix",
+  "collectionName": "movies",
+  "name": "plot_text_index",
+  "mappings": {
+    "dynamic": false,
+    "fields": {
+      "title": {
+        "type": "string"
+      },
+      "plot": {
+        "type": "string"
+      }
+    }
+  }
+}

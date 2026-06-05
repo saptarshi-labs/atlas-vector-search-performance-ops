@@ -141,9 +141,3 @@ terraform destroy
 cd ../infra
 terraform destroy
 ```
-
-## Further Reading
-
-- Detailed analysis with screenshots: [`findings.pdf`](findings.pdf)
-- Raw evidence (24 documents): [`evidence/search_evidence.json`](evidence/search_evidence.json)
-- Operational runbooks: [`runbooks/`](runbooks/)
